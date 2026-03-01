@@ -29,8 +29,8 @@ jobs:
       - name: Build the mod
         run: ./gradlew build
 
-      - name: Upload jar
-        uses: actions/upload-artifact@v3
+      - name: Upload built jar
+        uses: actions/upload-artifact@v4
         with:
           name: autodump-jar
-          path: build/libs/autodump-1.0.0.jar
+          path: build/libs/*.jar
